@@ -1,4 +1,4 @@
-## Starting from initial PDB sturture given by cgNA+min 
+## Starting from initial PDB (named initial.pdb) sturture given by cgNA+min 
 ## first redo the pdb file using tleap -- this will reindex bases from 1 .. N
 ## Then simply run the leap_initial_str.sh to get the final structure ...
 ## the leap_initial_str.sh script does the following steps
