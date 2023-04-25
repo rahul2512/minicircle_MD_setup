@@ -48,4 +48,8 @@ cp solvated.randions.crd ${RUNNAME}_${INDEX}.crd
 cp solvated.randions.pdb ${RUNNAME}_${INDEX}.pdb
 cp solvated.ions.top ${RUNNAME}_${INDEX}.top    
 
+## final step might be reuqired if it gives error "Box info not found" -- otherwise not important
+
+tail -1 solvated.crd >> ${RUNNAME}.crd
+tail -1 solvated.crd >> ${RUNNAME}_${INDEX}.crd
 
