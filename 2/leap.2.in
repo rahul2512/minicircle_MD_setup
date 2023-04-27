@@ -1,0 +1,27 @@
+source leaprc.water.tip3p
+source leaprc.ff14SBcirc 
+addAtomTypes {
+  { "C1" "C" "sp2" }
+  { "C2" "C" "sp2" }
+  { "CI" "C" "sp3" }
+  { "CE" "C" "sp3" }
+ }
+ loadoff parmBSC1.lib
+ loadamberparams frcmod.parmbsc1
+addPdbAtomMap {{OP1 O1P}{OP2 O2P}{H5' H5'1}{H5'' H5'2}{H2' H2'1}{H2'' H2'2}}
+set default PBradii mbondi3
+
+dna = loadpdb solvated.pdb
+
+
+addionsRand dna K+ 0
+addionsRand dna Cl- 0
+
+addionsRand dna K+ UUUU
+addionsRand dna Cl- UUUU
+
+
+savepdb dna solvated.ions.pdb
+saveamberparm dna solvated.ions.top solvated.ions.crd
+
+quit

@@ -1,0 +1,10 @@
+## Starting from initial PDB (named initial.pdb) sturture given by cgNA+min 
+## first redo the pdb file using tleap -- this will reindex bases from 1 .. N
+## Then simply run the leap_initial_str.sh to get the final structure ...
+## the leap_initial_str.sh script does the following steps
+## a) reindex bases from 1 .. N
+## b) Close the minicircle by forming bonds between terminal bases
+## c) add water
+## d) Add ions to neutralize and then corresponding to 0.15M KCl
+
+##  Check leap.log and visualize the final structre using VMD or any viewer

@@ -1,0 +1,8 @@
+parm solvated.ions.top
+trajin solvated.ions.crd
+randomizeions :K+,Cl-,Na+ around :DA,DC,DG,DT,D?3,D?5 by 6.0 overlap 4.0
+trajout solvated.randions.crd restart
+trajout solvated.randions.pdb pdb
+go
+quit
+
